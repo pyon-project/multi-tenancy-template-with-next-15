@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Validate branch name
+BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+PATTERN="^(chore|fix|init|feat)\/[0-9]+-[a-z0-9-]+$"
+
+if ! [[ $BRANCH_NAME =~ $PATTERN ]]; then
+  echo "Branch name must match pattern: (chore|fix|init|feat)/1234-example-branch-name"
+  exit 1
+fi
+
+# Run checks
+npm run lint
+npm run format
+npm run build
+npm test

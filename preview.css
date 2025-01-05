@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light theme colors for Storybook when components are in dark mode */
+:root {
+  --storybook-bg: #ffffff;
+  --storybook-text: #333333;
+  --docs-bg: #ffffff;
+  --docs-text: #333333;
+}
+
+/* Style the docs page */
+.sbdocs.sbdocs-wrapper {
+  background-color: var(--docs-bg) !important;
+  color: var(--docs-text) !important;
+}
+
+/* Style the docs content */
+.sbdocs.sbdocs-content {
+  background-color: var(--docs-bg) !important;
+  color: var(--docs-text) !important;
+}
+
+/* Create a contained dark background for the components */
+.docs-story > div {
+  background-color: #464545 !important;
+  padding: 1rem;
+}
+
+/* Style code blocks */
+.docblock-source {
+  background-color: #f5f5f5 !important;
+  color: #3f3f3f !important;
+}
+
+/* Style the preview controls */
+.docblock-argstable-body {
+  background-color: var(--storybook-bg) !important;
+  color: var(--docs-text) !important;
+}
+
+/* Optional: Style table headers */
+.docblock-argstable-head {
+  background-color: var(--storybook-bg) !important;
+  color: var(--docs-text) !important;
+}
