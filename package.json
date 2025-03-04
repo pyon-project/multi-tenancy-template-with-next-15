@@ -21,7 +21,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
     "check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
     "prepare": "husky",
-    "test": "jest"
+    "test": "jest",
+    "create-site": "./create.sh"
   },
   "dependencies": {
     "clsx": "^2.1.1",
